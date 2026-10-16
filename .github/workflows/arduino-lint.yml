@@ -9,8 +9,9 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: arduino/arduino-lint-action@v2
+      - uses: actions/checkout@v5
+      - uses: arduino/arduino-lint-action@v3
         with:
-          library-manager: update
+          # "submit" until SmoothUI is in Library Manager; then change to "update".
+          library-manager: submit
           compliance: strict
