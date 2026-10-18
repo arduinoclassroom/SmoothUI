@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@v5
       - uses: arduino/arduino-lint-action@v3
         with:
-          # "submit" until SmoothUI is in Library Manager; then change to "update".
-          library-manager: submit
+          # SmoothUI is in Library Manager: check new releases against its rules.
+          library-manager: update
           compliance: strict
